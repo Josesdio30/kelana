@@ -38,4 +38,5 @@ const HotelCard = ({hotel}:Props) => {
   )
 }
 
+
 export default HotelCard
