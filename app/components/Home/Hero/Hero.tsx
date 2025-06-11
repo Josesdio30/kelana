@@ -21,6 +21,7 @@ const Hero = () => {
       {/* Content */}
       <div className='absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-4 flex flex-col items-center'>
         <div className='flex flex-col items-center text-center space-y-4 mb-6'>
+          <div data-aos="fade-up">
           <h1 className='text-[25px] md:text-[35px] lg:text-[45px] tracking-[0.7rem] text-white font-bold uppercase'>
             Lets enjoy the nature
           </h1>
@@ -34,6 +35,7 @@ const Hero = () => {
           <span className='relative font-bold'>Search</span>
         </Link>
       </div>
+    </div>
     </div>
   )
 }

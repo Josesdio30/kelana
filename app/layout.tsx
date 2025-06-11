@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import {Poppins} from "next/font/google";
 import ResponsiveNav from "./components/Home/Navbar/ResponsiveNav";
+import Footer from "./components/Home/Footer/Footer";
+import ScrollToTop from "./components/Home/ScrollToTop";
 
 
 
@@ -48,6 +50,8 @@ export default function RootLayout({
       >
         <ResponsiveNav/>
         {children}
+        <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );
