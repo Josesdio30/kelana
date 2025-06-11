@@ -1,7 +1,7 @@
 import SectionHeading from '@/components/Helper/SectionHeading'
 import React from 'react'
 import WhyChooseCard from './WhyChooseCard'
-import Image from 'next/image'
+
 
 const whyChoose = () => {
   return (
