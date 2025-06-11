@@ -15,14 +15,14 @@ const SearchBox = () => {
       <div className='flex items-center space-x-6'>
         <FaCalendarWeek className='w-6 h-6 text-blue-600'/>
         <div>
-          <p className='text-lg font-medium mb-[0.2rem]'>Start Date</p>
+          <p className='text-lg font-medium mb-[0.2rem]'>Check In</p>
           <input type="date" className='outline-none border-none' />
         </div>
       </div>
       <div className='flex items-center space-x-6'>
         <FaCalendarWeek className='w-6 h-6 text-blue-600'/>
         <div>
-          <p className='text-lg font-medium mb-[0.2rem]'>End Date</p>
+          <p className='text-lg font-medium mb-[0.2rem]'>Check Out</p>
           <input type="date" className='outline-none border-none' />
         </div>
       </div>
@@ -30,7 +30,7 @@ const SearchBox = () => {
         <FaUserGroup className='w-6 h-6 text-blue-600'/>
         <div>
           <p className='text-lg font-medium mb-[0.2rem]'>Guest</p>
-          <p className='text-base font-normal'> 1 guest 1 room</p>
+          <p className='text-base font-normal'> 1 guest 1 pax</p>
         </div>
       </div>
     </div>
