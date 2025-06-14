@@ -1,6 +1,7 @@
 'use client';
 
 import { navlinks } from '@/constant/constant';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { HiBars3BottomRight } from 'react-icons/hi2';
@@ -25,10 +26,15 @@ const Nav = ({openNav}:Props) => {
     <div className={`${navBg ? 'bg-blue-950 shadow-md' : "fixed" } transition-all duration-200 h-[12vh] z-[1000] fixed w-full`}>
       <div className='flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto'>
         <div className='flex items-centers space-x-2'>
-          <div className='w-10 h-10 bg-rose-500 rounded-full flex items-center justify-center fle-col'>
-            <TbAirBalloon className='w-6 h-6 text-white'/>
+          <div className='w-20 h-20 bg-[#f5e9dc] rounded-full flex items-center justify-center fle-col'>
+            <Image 
+              src="/images/logo.png" 
+              alt="KelanaCrew Logo" 
+              width={120} 
+              height={120} 
+            />
           </div>
-          <h1 className='text-xl md:text-2xl text-white uppercase font-bold'>KelanaCrew</h1>
+          <h1 className='text-xl md:text-2xl text-white uppercase font-bold mt-6'>KelanaCrew</h1>
         </div>
         <div className='hidden lg:flex items-center space-x-10'>
           {navlinks.map((link) =>{
