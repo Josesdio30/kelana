@@ -1,3 +1,5 @@
+'use client'
+
 import { navlinks } from '@/constant/constant'
 import Link from 'next/link'
 import React from 'react'
@@ -9,7 +11,6 @@ type Props = {
 }
 
 const MobileNav = ({closeNav, showNav}:Props) => {
-
   const navOpen = showNav ? 'translate-x-0' : 'translate-x-[-100%]';
   return (
     <div>
@@ -24,7 +25,10 @@ const MobileNav = ({closeNav, showNav}:Props) => {
             </Link>
           )
         })}
-        <CgClose onClick={closeNav} className="absolute top-[0.7rem] right-[1.4rem] sm:w-8 sm:h-8  w-6 h-6"/>
+        <button className='px-6 py-2 text-sm sm:text-base text-black bg-white hover:bg-gray-200 transition-all duration-200 rounded-lg w-fit ml-12 mt-6'>
+          Book Now
+        </button>
+        <CgClose onClick={closeNav} className="absolute top-[0.7rem] right-[1.4rem] sm:w-8 sm:h-8 w-6 h-6"/>
       </div>
     </div>
   )
