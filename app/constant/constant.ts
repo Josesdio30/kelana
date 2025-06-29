@@ -15,12 +15,6 @@ export const navlinks = [
     label: "Destination",
   },
   {
-    id: 4,
-    url: "#",
-    label: "Blog",
-  },
-  
-  {
     id: 6,
     url: "#",
     label: "Contact",
