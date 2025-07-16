@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
 import {Poppins} from "next/font/google";
+import { usePathname } from "next/navigation";
 import ResponsiveNav from "./components/Home/Navbar/ResponsiveNav";
 import Footer from "./components/Home/Footer/Footer";
 import ScrollToTop from "./components/Home/ScrollToTop";
@@ -43,10 +44,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = typeof window !== "undefined" ? window.location.pathname : "/";
+  // Kalau pakai client component, bisa pakai usePathname, tapi layout.tsx ini server component, jadi pakai window.location.pathname di client saja
+  // Atau, bisa buat ClientWrapper khusus jika mau lebih rapi
   return (
     <html lang="en">
       <body
-        className={`${font.className} antialiased`}
+        className={`${font.className} antialiased ${pathname !== "/" ? "pt-[12vh]" : ""}`}
       >
         <ResponsiveNav/>
         {children}

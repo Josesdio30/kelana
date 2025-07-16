@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { HiBars3BottomRight } from 'react-icons/hi2';
+import { usePathname } from 'next/navigation';
 
 type Props = {
   openNav?: () => void;
@@ -12,6 +13,8 @@ type Props = {
 
 const Nav = ({ openNav }: Props) => {
   const [navBg, setNavBg] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handler = () => {
@@ -22,11 +25,14 @@ const Nav = ({ openNav }: Props) => {
     return () => window.removeEventListener('scroll', handler);
   }, []);
 
+  // Jika bukan home, langsung biru
+  const navClass = isHome
+    ? (navBg ? 'bg-blue-950 shadow-md fixed' : 'fixed')
+    : 'bg-blue-950 shadow-md';
+
   return (
     <div
-      className={`${
-        navBg ? 'bg-blue-950 shadow-md' : 'fixed'
-      } transition-all duration-200 h-[12vh] z-[1000] fixed w-full`}
+      className={`${navClass} transition-all duration-200 h-[12vh] z-[1000] w-full`}
     >
       <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">
         <div className="flex items-center space-x-2">
