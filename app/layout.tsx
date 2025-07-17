@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
 import {Poppins} from "next/font/google";
-import { usePathname } from "next/navigation";
 import ResponsiveNav from "./components/Home/Navbar/ResponsiveNav";
 import Footer from "./components/Home/Footer/Footer";
 import ScrollToTop from "./components/Home/ScrollToTop";
